@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Manager</title>
+    <style>
+        #head{
+        display: flex;
+        justify-content: space-between;
+        }
+        #logout-btn{
+            color: rgb(20, 80, 80);
+            height: 35px;
+            
+        }
+    </style>
+</head>
+<body>
+    <div id="head">
+    <h1>Task Manager</h1>
+    <button id="logout-btn">Logout</button>
+    </div>
+    <form id="task-form">
+        <input type="text" id="task" placeholder="Add a new task" required>
+        <button type="submit" id="form-btn">Add Task</button>
+    </form>
+    <ul id="task-list"></ul>
+    <script src="script.js"></script>
+</body>
+</html>
