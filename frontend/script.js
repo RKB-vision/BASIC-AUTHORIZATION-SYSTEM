@@ -1,6 +1,6 @@
 
 //EXTRACTING ELEMENTS FROM DOCUMENTS
-let form=document.querySelector("#task-form")
+const form=document.querySelector("#task-form")
 let taskInput=document.querySelector("#task")
 let taskList=document.querySelector("#task-list")
 const token=localStorage.getItem("token")
@@ -8,6 +8,7 @@ const logoutBtn=document.querySelector("#logout-btn")
 render();
 
 //FORM PART
+if(form){
 form.addEventListener("submit",async (event)=>{
     event.preventDefault()
 
@@ -34,7 +35,7 @@ form.addEventListener("submit",async (event)=>{
     taskInput.value="";
 
     render();
-})
+})}
 
 
 //LOADING PART
@@ -64,6 +65,7 @@ async function render(){
 }
 
 //UPDATING and DELETING PART 
+if(taskList){
 taskList.addEventListener("click",async (details)=>{
     let id=details.target.dataset.id
     let class_name=details.target.classList
@@ -109,4 +111,4 @@ logoutBtn.addEventListener("click",()=>{
     localStorage.removeItem("token")
     window.location.href="index.html"
 }
-)
+)}
